@@ -22,7 +22,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
 - Remote into VMs
-- Use traffic filter program
+- Use Wireshark Traffic analyzer tool
 - Inspect traffic protocols
 - Edit/set traffic rules
 
@@ -48,7 +48,39 @@ Next, from Windows Powershell command line in VM1 and using the ICMP traffic pro
 <img src="https://i.imgur.com/LGP0GGR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next, from our Wireshark taffic analyzer tool we observe the IP address traffic exchange between VM1 and VM2.
+Next, from our Wireshark taffic analyzer tool we observe the "ping" command line IP address traffic exchange between VM1 and VM2.
+</p>
+<br /># azure-network-protocols
+
+<p>
+<img src="https://i.imgur.com/zNJpsqZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, we begin to edit the "inbound traffic rules" for VM2. The above image shows we are denying ICMP traffic for VM2 from Azure Network Security Rules.
+</p>
+<br /># azure-network-protocols
+
+<p>
+<img src="https://i.imgur.com/pTr5DZL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, after denying ICMP traffic for VM2 in Azure we see in the Wireshark analyzer tool that ICMP traffic in which the "ping" command uses is blocked. You only see the "request" but no response.
+</p>
+<br /># azure-network-protocols
+
+<p>
+<img src="https://i.imgur.com/UGNxjaa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, in order for VM2 to once again receive ICMP traffic we need to edit the Azure Network Security Rules for VM2 to "allow" ICMP traffic as the above image shows. 
+</p>
+<br /># azure-network-protocols
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br /># azure-network-protocols
 
