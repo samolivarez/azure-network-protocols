@@ -40,7 +40,7 @@ This tutorial begins with the prerequesite of having created 2 Virtual Machines;
 <img src="https://i.imgur.com/9os3jxk.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next, from Windows Powershell command line in VM1 and using the ICMP traffic protocol we are "pinging" from VM1 to VM2 and observe the IP traffic "reply" from VM2 in the command line.
+Next, from Windows Powershell command line in VM1 and using the ICMP traffic protocol we are "pinging" from VM1 to VM2 and observe the IP traffic "reply" from VM2 in the command line. This is done by typing from Vm1's command line the "ping command along with VM2's private IP address.
 </p>
 <br />
 
@@ -80,23 +80,24 @@ Next, in order for VM2 to once again receive ICMP traffic we need to edit the Az
 <img src="https://i.imgur.com/GbrvjbE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next, as the above image shows; VM2 with IP address of 10.0.0.5 is once again allowing ICMP traffic to be received from VM1's IP address (10.0.0.4) which can be confirmed by observing the request/reply interaction between the two IP addresses in the Wireshark analyzer tool.
+Next, as the above image shows; VM2 with IP address of 10.0.0.5 is once again allowing ICMP traffic to be received from VM1's IP address (10.0.0.4) which can be confirmed by observing the request/reply interaction between the two IP addresses in the Wireshark traffic analyzer tool.
 </p>
 <br /># azure-network-protocols
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yX5TylX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we start to observe SSH protocol traffic between VM1 and VM2 in Wireshark. As the above image shows this can be done by first typing SSH in the Wireshark traffic bar insted of ICMP. Secondly to start observing SSH traffic flow between the two VMs we need to open a powershell command line in VM1 then type SSH along with VM2's username at Vm2's private IP address. For example:
+SSH VM2username@VM2privateIPaddress 
 </p>
 <br /># azure-network-protocols
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/X1q1k9x.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, we are start to observe DNS protocol traffic between Vm1 and VM2 in Wireshark.  This is done by first exiting from our previous SSH protocol traffic connection between VM1 and VM2 by typing "exit" in the command line of VM2 to close out the sessio. Now we can type DNS in the wireshark traffic filter bar instead of SSH then proceed to VM1s command line and type for example "nslookup www.google.com" and will start to see the traffic exchange in wireshark between Vm1 and the IP address of www.google.com
 </p>
 <br /># azure-network-protocols
 
