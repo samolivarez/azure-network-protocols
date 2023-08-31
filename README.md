@@ -77,6 +77,22 @@ Next, in order for VM2 to once again receive ICMP traffic we need to edit the Az
 <br /># azure-network-protocols
 
 <p>
+<img src="https://i.imgur.com/GbrvjbE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Next, as the above image shows; VM2 with IP address of 10.0.0.5 is once again allowing ICMP traffic to be received from VM1's IP address (10.0.0.4) which can be confirmed by observing the request/reply interaction between the two IP addresses in the Wireshark analyzer tool.
+</p>
+<br /># azure-network-protocols
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br /># azure-network-protocols
+
+<p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
